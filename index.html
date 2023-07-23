@@ -62,6 +62,22 @@
         padding: 20px;
         width: auto;
       }
+
+      #fixedTop {
+        text-decoration: none;
+        background-color: #9c8135;
+        border: white solid 3px;
+        color: white;
+        padding: 14px 10px;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        z-index: 9999;
+        font-size: 18px;
+        /* 先不顯示，透過捲軸捲動才顯示出來 */
+        display: none;
+      }
     </style>
   </head>
 
@@ -95,7 +111,77 @@
           聯繫我們
         </a>
       </div>
+      <div class="icon-area d-flex">
+        <div class="user">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="order">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div class="menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
     </nav>
+
+    <div class="nav-m">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <div class="logo-m" style="width: 50px">
+              <img src="./Header/logo.svg" alt="" />
+            </div>
+          </a>
+          <div class="icon-area d-flex">
+            <div class="user">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="order">
+              <i class="fa-solid fa-hotel"></i>
+            </div>
+            <div class="menu">
+              <i class="fa-solid fa-bars" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"></i>
+            </div>
+          </div>
+          <!-- <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">最新消息</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">關於我們</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">房型介紹</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">設施&服務</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">預定入住</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">聯繫我們</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
 
     <!-- 首屏Banner -->
     <div class="index-section1">
@@ -236,17 +322,23 @@
 
     <!-- About區塊(修改) -->
     <div class="index-section5">
-      <div class="col-lg-5 d-none d-lg-block">
-        <img src="./Body/About/middle04.jpeg" alt="" />
+      <!-- mobile出現 -->
+      <div class="d-block d-lg-none about-title-mobile">
+        <h2 class="">about A-STAR</h2>
       </div>
-      <div class="col-lg-7 p-0 d-none d-lg-flex flex-column justify-content-center align-items-center position-relative">
-        <h2 class="about-title">about A-STAR</h2>
-        <p class="about-text">
-          我們是A-Star Hotel，被評比為6星級的高級旅店，我們提供一個無與倫比的奢華避風港，為每位客人提供極致的體驗和無微不至的服務。
-          我們的旅店位於一個壯麗的地理位置，享有令人嘆為觀止的景色和便捷的交通連接。我們的建築設計充滿著藝術與現代風格的融合，呈現出傳統與創新的完美平衡。
-          步入我們的旅店，您將立即感受到對細節的極致關注。每個角落都經過精心設計，展現出優雅、獨特的氛圍。我們的客房提供舒適的床鋪、精緻的家具和最先進的設施，確保您的逗留期間能夠享受到無與倫比的寧靜與奢華。
-          我們的服務團隊由經驗豐富且訓練有素的專業人員組成，他們以周到、個性化的方式照顧每位客人。無論您需要什麼，我們的團隊將竭盡所能為您提供幫助，確保您的需求得到滿足。
-        </p>
+      <div class="d-flex align-items-center flex-column flex-lg-row">
+        <div class="col-lg-5 d-lg-block my-5">
+          <img src="./Body/About/middle04.jpeg" alt="" />
+        </div>
+        <div class="col-lg-7 p-0 d-lg-flex flex-column justify-content-center align-items-center position-relative">
+          <h2 class="about-title d-none d-lg-block">about A-STAR</h2>
+          <p class="about-text">
+            我們是A-Star Hotel，被評比為6星級的高級旅店，我們提供一個無與倫比的奢華避風港，為每位客人提供極致的體驗和無微不至的服務。
+            我們的旅店位於一個壯麗的地理位置，享有令人嘆為觀止的景色和便捷的交通連接。我們的建築設計充滿著藝術與現代風格的融合，呈現出傳統與創新的完美平衡。
+            步入我們的旅店，您將立即感受到對細節的極致關注。每個角落都經過精心設計，展現出優雅、獨特的氛圍。我們的客房提供舒適的床鋪、精緻的家具和最先進的設施，確保您的逗留期間能夠享受到無與倫比的寧靜與奢華。
+            我們的服務團隊由經驗豐富且訓練有素的專業人員組成，他們以周到、個性化的方式照顧每位客人。無論您需要什麼，我們的團隊將竭盡所能為您提供幫助，確保您的需求得到滿足。
+          </p>
+        </div>
       </div>
     </div>
 
@@ -355,5 +447,36 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- 回到Top紐 -->
+    <script>
+      $(function () {
+        $("body").append('<a href="javascript:void(0);"id="fixedTop">TOP</a>');
+
+        // 變數化
+        let fixedTop = $("#fixedTop");
+
+        // 載入(load)、捲動(scroll)、調整視窗大小(resize)時
+        $(window).on("load scroll resize", function () {
+          // 取得(偵測)卷軸的位置
+          //     console.log($(window).scrollTop());
+
+          //檢查捲軸的位置是否超過100
+          if ($(window).scrollTop() > 100) {
+            // 是＝>顯示TOP紐
+            $("#fixedTop").fadeIn("normal");
+          } else {
+            // 否=>隱藏TOP紐
+            $("#fixedTop").fadeOut("normal");
+          }
+        });
+
+        // 左鍵按一下(click)TOP紐時，回到最上面
+        $("#fixedTop").on("click", function () {
+          // 捲動畫面到最上面=>scrollTop:'0'
+          $("html,body").animate({ scrollTop: "0" }, 500);
+        });
+      });
+    </script>
   </body>
 </html>
