@@ -1,0 +1,234 @@
+/* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+  margin: 0px auto;
+  width: 1024px;
+} */
+
+@media screen and (max-width: 480px) {
+}
+
+/* 首頁Banner */
+.index-section1 {
+  width: 100%;
+  height: 750px;
+  position: relative;
+  background-color: #9c8135;
+  /* 背景圖片 */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../Body/Mainblock/main-block-background.jpg);
+}
+
+.star-area img {
+  height: 30px;
+  width: 30px;
+  padding-left: 0px;
+  /* border: solid red 2px; */
+  margin-right: 10px;
+}
+
+.slogan-area {
+  color: white;
+  letter-spacing: 3px;
+  margin-top: 30px;
+}
+
+.welcome-area h3 {
+  font-size: 36px;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.astar-area h1 {
+  font-size: 64px;
+  font-style: italic;
+}
+
+/* Ｍain-area區(月亮&圖片) */
+.main-banner-area {
+  z-index: 2;
+  width: 600px;
+  margin-top: 50px;
+}
+
+.main-banner-area img {
+  width: 100%;
+}
+
+.moon-area {
+  width: 200px;
+  height: 200px;
+  left: -113px;
+  top: -35px;
+  z-index: 1;
+  position: absolute;
+}
+
+.moon-area img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Crousel */
+.index-section2 {
+  width: auto;
+}
+
+#carousel {
+  width: 100% !important;
+}
+
+/* News區塊 */
+.index-section3 {
+  background-image: url("../Body/Mainblock/main05.jpg");
+  padding: 80px 0px;
+  background-repeat: no-repeat;
+  /* 圖片滿版 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+.index-section3::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.541);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+.news-box {
+  background-color: #9c8135ce;
+  color: white;
+  padding: 20px 60px;
+  border-radius: 0px 80px 0px 80px;
+}
+
+.main-wish-card {
+  background-color: #9c8135;
+  border-radius: 0px 40px 0px 40px;
+}
+
+.main-wish-card img {
+  border-radius: 0px 30px 0px 30px;
+}
+
+.index-section4 {
+  padding: 80px 0;
+  background-image: url("../Body/Mainblock/middle03.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+.index-section4 h2 {
+  color: #9c8135;
+}
+
+/* About區塊 */
+.index-section5 {
+  padding: 80px 0;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.news-box {
+  padding: 40px 60px;
+  background-color: #9c8135d8;
+  color: #fff;
+  border-radius: 0 80px 0 80px;
+  z-index: 1;
+}
+
+.news-card {
+  position: relative;
+}
+
+.main-wish-card {
+  max-width: 80%;
+  background-color: #9c8135;
+  border-radius: 0 80px 0 80px;
+}
+.main-wish-card > img {
+  border-radius: 0 60px 0 60px;
+}
+.wish-card::after {
+  content: "";
+  background-color: #9c8135;
+  border-radius: 0 40px 0 40px;
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  z-index: -1;
+}
+.about-title {
+  padding: 12px 50px;
+  border-radius: 100px;
+  display: inline-block;
+  background-color: #9c8135;
+  position: absolute;
+  top: -20px;
+  z-index: 2;
+}
+.about-text {
+  line-height: 2;
+  padding: 50px 40px;
+  color: #fff;
+  background-color: #222;
+  border-radius: 0 80px 0 80px;
+  position: relative;
+  border-top: 20px solid #9c8135;
+  border-left: 24px solid #9c8135;
+}
+
+/* Carousel */
+.carousel {
+  width: 1200px;
+}
+
+/* footer */
+.footer img {
+  height: 50px;
+  left: 0;
+}
+
+.footer {
+  clear: both;
+  background-color: #9c8135;
+  text-align: center;
+}
+
+.footer svg {
+  fill: #222221;
+}
+
+.footer svg:hover {
+  fill: white;
+}
+
+.footer li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.copywrite {
+  color: black;
+}

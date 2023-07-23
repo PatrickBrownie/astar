@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./astar.css" media="screen and (max-width:480px)"> -->
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <!-- 旋轉木馬 -->
+    <!-- jQuery主程式 -->
+    <script src="./jQuery/js/jquery-1.11.3.min.js"></script>
+    <!-- 旋轉木馬程式 -->
+    <script src="./jQuery/js/jquery.jcarousellite.min.js"></script>
+    <!-- 自己寫的js -->
+    <script>
+      $(document).ready(function () {
+        $("#carousel").jCarouselLite({
+          auto: 1000, //多久時間轉動
+          scroll: 1, //每次捲動的張數
+          visable: 5, //顯示的張數
+          speed: 1000, //捲動的速度
+        });
+      });
+    </script>
+
+    <style>
+      #carousel img {
+        width: 100%;
+        height: 150px;
+        vertical-align: top;
+        margin: 5px;
+        float: center;
+        align-items: center;
+      }
+
+      #carousel {
+        background-color: black;
+        padding: 20px;
+        width: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 選單列 -->
+    <nav class="nav">
+      <img class="logo col-1" src="./Header/logo.svg" alt="" />
+      <div class="navbox col-10 justify-content-evenly">
+        <a class="navlink" href="">
+          <img class="star" src="./Body/others/SVG/blackstar.svg" alt="" />
+          最新消息
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./Body/others/SVG/blackstar.svg" alt="" />
+          關於我們
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./Body/others/SVG/blackstar.svg" alt="" />
+          房型介紹
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./Body/others/SVG/blackstar.svg" alt="" />
+          設施&服務
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./Body/others/SVG/blackstar.svg" alt="" />
+          預定入住
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./Body/others/SVG/blackstar.svg" alt="" />
+          聯繫我們
+        </a>
+      </div>
+    </nav>
+
+    <!-- 首屏Banner -->
+    <div class="index-section1">
+      <div class="section1-content py-3">
+        <div class="main-banner d-flex col-12 flex-column align-items-center justify-content-center">
+          <div class="slogan-area w-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="welcome-area">
+              <h3>welcome to</h3>
+            </div>
+            <div class="astar-area d-flex align-items-center">
+              <div class="star-area d-flex">
+                <img src="./Body/others/SVG/whitestar.svg" alt="" />
+                <img src="./Body/others/SVG/whitestar.svg" alt="" />
+                <img src="./Body/others/SVG/whitestar.svg" alt="" />
+              </div>
+              <div><h1>A-STAR</h1></div>
+              <div class="star-area d-flex">
+                <img src="./Body/others/SVG/whitestar.svg" alt="" />
+                <img src="./Body/others/SVG/whitestar.svg" alt="" />
+                <img src="./Body/others/SVG/whitestar.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex position-relative justify-content-center">
+            <div class="moon-area">
+              <img src="./Body/others/SVG/moon.svg" alt="" />
+            </div>
+            <div class="main-banner-area" alt="">
+              <img src="./Body/Mainblock/main03.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="index-section2">
+      <div id="carousel" class="col-12">
+        <ul>
+          <li><img src="./Body/Carousels/c01.jpg" alt="" /></li>
+          <li><img src="./Body/Carousels/c02.jpg" alt="" /></li>
+          <li><img src="./Body/Carousels/c03.jpg" alt="" /></li>
+          <li><img src="./Body/Carousels/c04.jpg" alt="" /></li>
+          <li><img src="./Body/Carousels/c05.jpg" alt="" /></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- News區塊 -->
+    <div class="index-section3">
+      <div class="content">
+        <div class="news-box">
+          <div class="d-flex justify-content-center align-items-center gap-4">
+            <img class="star" src="./Body/others/SVG/whitestar.svg" alt="" />
+            <h2>News</h2>
+            <img class="star" src="./Body/others/SVG/whitestar.svg" alt="" />
+          </div>
+          <!-- Bootstrap有些指令可以直接寫在html中 -->
+          <!-- <div class="h1 text-center">News</div> -->
+          <h6 class="text-center my-2">所有關於Ａ-Star的最新消息/優惠資訊皆在此！</h6>
+          <p>
+            我們期望讓您享受時尚、獨特的用餐和放鬆、賓至如歸的住宿體驗。我們的團隊致力於提供個性化的服務，確保您的需求得到完美滿足。請期待我們所推出的活動，我們滿心迎接您的光臨，一同創造美好時刻！
+          </p>
+          <!-- 從手機版寫到大尺寸，一開始手機版是直的故:d-flex flex-colum，flex-lg-row大尺寸讓他是橫的，
+              Bootstrap程式語碼(平均分)：justify-content-lg-between -->
+          <div class="news-card-list d-flex flex-column flex-lg-row justify-content-lg-between gap-2">
+            <!-- d-flex變成橫排；d-flex flex-colum 變成直的，然後全部齊右-->
+            <div class="news-card d-flex flex-column align-items-end">
+              <a href="#" class="pic01 mt-3"><img src="./Body/News/news01.jpg" class="" alt="" /></a>
+              <p class="mt-2 me-auto">2023/07/01</p>
+              <h6 class="my-2 me-auto">浪漫老梅石槽一日遊</h6>
+              <!-- more的位置 -->
+              <a class="more d-flex gap-2 position-relative" href="">MORE</a>
+            </div>
+            <div class="news-card d-flex flex-column align-items-end">
+              <a href="#" class="pic02 mt-3"><img src="./Body/News/news02.jpg" class="" alt="" /></a>
+              <p class="mt-2 me-auto">2023/06/30</p>
+              <h6 class="my-2 me-auto">星辰廚房7月份開放訂位</h6>
+              <!-- more的位置 -->
+              <a class="more d-flex gap-2 position-relative" href="">MORE</a>
+            </div>
+            <div class="news-card d-flex flex-column align-items-end">
+              <a href="#" class="pic03 mt-3"><img src="./Body/News/news03.jpg" alt="" /></a>
+              <p class="mt-2 me-auto">2023/06/28</p>
+              <h6 class="my-2 me-auto">天然食材。嚴格把關</h6>
+              <!-- more的位置 -->
+              <a class="more d-flex gap-2 position-relative" href="">MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="index-section4">
+      <div class="content">
+        <h2 class="text-center my-4 style=color:#9c8135">Make a Wish...</h2>
+        <!-- 尊榮房 -->
+        <div class="main-wish-card d-flex mx-auto p-3 mb-4">
+          <a href="#" class="pic04 w-50"><img src="./Body/Room/room00.jpeg" alt="" /></a>
+          <div class="w-50 text-white d-flex flex-column justify-content-between">
+            <h5 class="title d-flex justify-content-center align-items-center gap-2 mx-auto text-center">尊榮房</h5>
+            <p class="ps-4">特選尊榮客房擁有全視界採光觀景窗，可欣賞敦南林蔭大道的璀璨風情與城市美景。寬敞的空間備有沙發床，適合與3-4位家人親友同遊入住。</p>
+            <div class="news-card d-flex flex-column align-items-end">
+              <a class="more d-flex gap-2 position-relative ms-auto" href="">MORE</a>
+            </div>
+          </div>
+        </div>
+        <!-- 豪華房 -->
+        <div class="wish-card-list d-flex flex-column flex-lg-row justify-content-lg-between gap-2">
+          <div class="wish-card d-flex flex-column mb-4 mb-lg-0 position-relative px-3 text-white">
+            <a href="#" class="pic05"><img class="" src="./Body/Room/room01.jpg" alt="" /></a>
+            <h5 class="title d-flex justify-content-center align-items-center gap-2 mx-auto my-3">豪華房</h5>
+            <p class="">超豪華客房提供旅客充足的收納空間，呈現舒適便利的現代生活居家氛圍。全視界採光觀景窗更將群山環繞的無敵市景盡收眼底！</p>
+            <div class="news-card d-flex flex-column align-items-end">
+              <a class="more d-flex gap-2 position-relative" href="">MORE</a>
+            </div>
+          </div>
+          <!-- 經典房A -->
+          <div class="wish-card d-flex flex-column justify-content-center position-relative px-3 text-white">
+            <a href="#" class="pic06"><img src="./Body/Room/room02.jpg" alt="" /></a>
+            <h5 class="title d-flex justify-content-center align-items-center gap-2 mx-auto text-center my-3">經典房A</h5>
+            <p class="w-100">經典房A提供旅客充足的收納空間，呈現舒適便利的現代生活居家氛圍。全視界採光觀景窗更將群山環繞的無敵市景盡收眼底！</p>
+            <div class="news-card d-flex flex-column align-items-end">
+              <a class="more d-flex gap-2 position-relative" href="">MORE</a>
+            </div>
+          </div>
+          <!-- 經典房B -->
+          <div class="wish-card d-flex flex-column justify-content-center position-relative px-3 text-white">
+            <a href="#" class="pic07"><img src="./Body/Room/room03.jpg" alt="" /></a>
+            <h5 class="title d-flex justify-content-center align-items-center gap-2 mx-auto text-center my-3">經典房B</h5>
+            <p class="w-100">經典房B提供旅客充足的收納空間，呈現舒適便利的現代生活居家氛圍。全視界採光觀景窗更將群山環繞的無敵市景盡收眼底！</p>
+            <div class="news-card d-flex flex-column align-items-end">
+              <a class="more d-flex gap-2 position-relative" href="">MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About區塊(修改) -->
+    <div class="index-section5">
+      <div class="col-lg-5 d-none d-lg-block">
+        <img src="./Body/About/middle04.jpeg" alt="" />
+      </div>
+      <div class="col-lg-7 p-0 d-none d-lg-flex flex-column justify-content-center align-items-center position-relative">
+        <h2 class="about-title">about A-STAR</h2>
+        <p class="about-text">
+          我們是A-Star Hotel，被評比為6星級的高級旅店，我們提供一個無與倫比的奢華避風港，為每位客人提供極致的體驗和無微不至的服務。
+          我們的旅店位於一個壯麗的地理位置，享有令人嘆為觀止的景色和便捷的交通連接。我們的建築設計充滿著藝術與現代風格的融合，呈現出傳統與創新的完美平衡。
+          步入我們的旅店，您將立即感受到對細節的極致關注。每個角落都經過精心設計，展現出優雅、獨特的氛圍。我們的客房提供舒適的床鋪、精緻的家具和最先進的設施，確保您的逗留期間能夠享受到無與倫比的寧靜與奢華。
+          我們的服務團隊由經驗豐富且訓練有素的專業人員組成，他們以周到、個性化的方式照顧每位客人。無論您需要什麼，我們的團隊將竭盡所能為您提供幫助，確保您的需求得到滿足。
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer區塊 -->
+    <div class="footer">
+      <div class="text-center d-flex footer-widget align-items-center">
+        <div class="d-flex align-items-between ms-3 py-3">
+          <div class="d-flex align-items-center mx-2"><img src="./Footer/logo2.svg" alt="" /></div>
+          <!-- facebook -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512" class="mx-2">
+            <path
+              d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+            />
+          </svg>
+          <!-- Twitter -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 448 512" class="mx-2">
+            <path
+              d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"
+            />
+          </svg>
+          <!-- Instagram -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 448 512" class="mx-2">
+            <path
+              d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
+            />
+          </svg>
+        </div>
+        <div class="copywrite flex-column h-100 w-100 text-end px-4 d-flex justify-content-center">
+          <p class="">隱私權政策</p>
+          <p>Copyright &copy;A-Star 版權所有. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 圖片js動畫 -->
+    <script>
+      $(function () {
+        $(".pic01").hover(
+          function () {
+            $(".pic01").addClass("imgScale");
+          },
+          function () {
+            $(".pic01").removeClass("imgScale");
+          }
+        );
+
+        $(".pic02").hover(
+          function () {
+            $(".pic02").addClass("imgScale");
+          },
+          function () {
+            $(".pic02").removeClass("imgScale");
+          }
+        );
+
+        $(".pic03").hover(
+          function () {
+            $(".pic03").addClass("imgScale");
+          },
+          function () {
+            $(".pic03").removeClass("imgScale");
+          }
+        );
+
+        $(".pic04").hover(
+          function () {
+            $(".pic04").addClass("imgScale");
+          },
+          function () {
+            $(".pic04").removeClass("imgScale");
+          }
+        );
+
+        $(".pic05").hover(
+          function () {
+            $(".pic05").addClass("imgScale");
+          },
+          function () {
+            $(".pic05").removeClass("imgScale");
+          }
+        );
+
+        $(".pic06").hover(
+          function () {
+            $(".pic06").addClass("imgScale");
+          },
+          function () {
+            $(".pic06").removeClass("imgScale");
+          }
+        );
+        $(".pic07").hover(
+          function () {
+            $(".pic07").addClass("imgScale");
+          },
+          function () {
+            $(".pic07").removeClass("imgScale");
+          }
+        );
+      });
+    </script>
+
+    <!-- js套件 -->
+    <!-- <script src="./js/jquery-1.11.3.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

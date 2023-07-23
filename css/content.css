@@ -1,0 +1,71 @@
+.imgScale img {
+  transform: scale(1.5);
+}
+
+img {
+  transition: all 0.5s linear;
+}
+
+.pic01 {
+  overflow: hidden;
+}
+
+.pic02 {
+  overflow: hidden;
+}
+
+.pic03 {
+  overflow: hidden;
+}
+
+.pic01 img {
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+.pic02 img {
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+.pic03 img {
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+.pic04 {
+  overflow: hidden;
+  border-radius: 0px 50px 0px 50px;
+}
+
+.pic04 img {
+  height: 100%;
+  transition: all 0.4s linear;
+}
+
+.pic05 {
+  overflow: hidden;
+}
+
+.pic05 img {
+  height: 100%;
+  transition: all 0.4s linear;
+}
+
+.pic06 {
+  overflow: hidden;
+}
+
+.pic06 img {
+  height: 100%;
+  transition: all 0.4s linear;
+}
+
+.pic07 {
+  overflow: hidden;
+}
+
+.pic07 img {
+  height: 100%;
+  transition: all 0.4s linear;
+}
