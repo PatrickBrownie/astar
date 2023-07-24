@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./astar.css" media="screen and (max-width:480px)"> -->
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./all.css" />
+
+    <!-- Top回到置頂 -->
+    <style>
+      #fixedTop {
+        text-decoration: none;
+        background-color: #9c8135;
+        border: white solid 3px;
+        color: white;
+        padding: 14px 10px;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        z-index: 9999;
+        font-size: 18px;
+        /* 先不顯示，透過捲軸捲動才顯示出來 */
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="page01">
+    <!-- 選單列 -->
+    <nav class="nav">
+      <img class="logo col-1" src="./Header/logo.svg" alt="" />
+      <div class="navbox col-10 justify-content-evenly">
+        <a class="navlink" href="">
+          <img class="star" src="./SVG/blackstar.svg" alt="" />
+          最新消息
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./SVG/blackstar.svg" alt="" />
+          關於我們
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./SVG/blackstar.svg" alt="" />
+          房型介紹
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./SVG/blackstar.svg" alt="" />
+          設施&服務
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./SVG/blackstar.svg" alt="" />
+          預定入住
+        </a>
+        <a class="navlink" href="">
+          <img class="star" src="./SVG/blackstar.svg" alt="" />
+          聯繫我們
+        </a>
+      </div>
+      <div class="icon-area d-flex">
+        <div class="user">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="order">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div class="menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 首屏輪播Banner -->
+    <div class="">
+      <div class="index-section1">
+        <div class="section1-content">
+          <!-- 標題 -->
+          <div class="slogan-area w-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="title-area d-flex align-items-center">
+              <div class="star-area d-flex">
+                <img src="./SVG/whitestar.svg" alt="" />
+                <img src="./SVG/whitestar.svg" alt="" />
+                <img src="./SVG/whitestar.svg" alt="" />
+              </div>
+              <div class="py-2 px-3"><h1>尊榮房</h1></div>
+              <div class="star-area d-flex">
+                <img src="./SVG/whitestar.svg" alt="" />
+                <img src="./SVG/whitestar.svg" alt="" />
+                <img src="./SVG/whitestar.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="container d-flex justify-content-center align-items-center gap-4">
+            <!-- Bootstrap開始 -->
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./images/main-block/main01.jpg" class="d-block w-85" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/room-photo/room01.jpg" class="d-block w-85" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/room-photo/room02.jpg" class="d-block w-85" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/room-photo/room03.jpg" class="d-block w-85" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/room-photo/room04.jpg" class="d-block w-85" alt="..." />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 空間區塊 -->
+      <div class="index-section-2">
+        <div id="carouselExampleCaptions" class="carousel slide" data-immersive-translate-effect="1" data-immersive_translate_walked="7a5abec9-b7c7-4992-b249-8854f0ace6df">
+          <div class="carousel-indicators" data-immersive-translate-effect="1" data-immersive_translate_walked="7a5abec9-b7c7-4992-b249-8854f0ace6df">
+            <div id="button01" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></div>
+            <div id="button02" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></div>
+            <div id="button03" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></div>
+            <div id="button04" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></div>
+            <div id="button05" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></div>
+          </div>
+
+          <div class="carousel-inner2 h-100" data-immersive-translate-effect="1" data-immersive_translate_walked="7a5abec9-b7c7-4992-b249-8854f0ace6df">
+            <!-- 從這邊改 -->
+            <div class="carousel-item active h-100" data-immersive-translate-effect="1" data-immersive_translate_walked="7a5abec9-b7c7-4992-b249-8854f0ace6df">
+              <div class="room-area d-flex h-100 w-100 justify-content-between">
+                <!-- M版出現的標題 -->
+                <div class="carousel-title-mobile">
+                  <h3>徹底放鬆的私人衛浴空間</h3>
+                </div>
+                <div class="room-carousel d-flex">
+                  <img src="./images/space/space01.jpg" alt="" />
+                </div>
+                <!-- PC版的標題 -->
+                <div class="room-text-area d-flex flex-column">
+                  <h3 class="carousel-title-pc">徹底放鬆的私人衛浴空間</h3>
+                  <p>
+                    尊榮客房寬敞的衛浴空間，提供房客放鬆、沐浴的私人空間，燈光明亮、柔美的化妝台區，提供房客方便梳化的專屬空間。 每間尊榮防備有義大利進口按摩浴缸，幫助您無時無刻獲得放鬆且頂級的服務！
+                  </p>
+                  <p>*每月我們會針對按摩浴缸做檢測及維修，請您安心使用！</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="room-area d-flex h-100 w-100 justify-content-between">
+                <div class="carousel-title-mobile">
+                  <h3>一望無際的天然美景</h3>
+                </div>
+                <div class="room-carousel d-flex">
+                  <img src="./images/space/space02.jpg" alt="" />
+                </div>
+                <div class="room-text-area d-flex flex-column">
+                  <h3 class="carousel-title-pc">一望無際的天然美景</h3>
+                  <p>尊榮房型的天然美景是為您專屬打造的！我們飯店座落於環山圍繞之處，四季的變化有不同的山景，歡迎您細細地品嚐大自然送給您的美好！</p>
+                  <p>除了遼闊的美景，我們同樣注重您的隱私，搭配的德製窗簾布，不僅可以遮罩房間內部，以及杜絕刺眼的陽光，只給您最舒適、柔和的溫暖光源，希望您喜歡。</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="room-area d-flex h-100 w-100 justify-content-between">
+                <div class="carousel-title-mobile">
+                  <h3>台北指標性建築盡收眼底</h3>
+                </div>
+                <div class="room-carousel d-flex">
+                  <img src="./images/space/space03.jpg" alt="" />
+                </div>
+                <div class="room-text-area d-flex flex-column">
+                  <h3 class="carousel-title-pc">台北指標性建築盡收眼底</h3>
+                  <p>
+                    國際尊榮房位於信義區精華地區，從房間內窗戶外即可看見台北具有指標性的建築-101，高聳的外型、美輪美奐的建築設計，搭配國際一線品牌的百貨商場，讓101建築舉世聞名，歡迎您一同前往觀賞。
+                  </p>
+                  <p>101提供卓越的多元服務，從奢華住宿、精緻餐飲到360度觀景台，滿足旅客的每個需求。極致體驗，讓您留下難忘的回憶。</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="room-area d-flex h-100 w-100 justify-content-between">
+                <div class="carousel-title-mobile">
+                  <h3>舒適的休憩空間</h3>
+                </div>
+                <div class="room-carousel d-flex">
+                  <img src="./images/space/space04.jpg" alt="" />
+                </div>
+                <div class="room-text-area d-flex flex-column">
+                  <h3 class="carousel-title-pc">舒適的休憩空間</h3>
+                  <p>
+                    我們特別於房型內規劃一個空間，讓您可以望著窗外美景、好好地休息片刻，搭配我們的客房服務，提供米其林中西餐的不同選擇，菜色多元、份量亦可依人數作調整，歡迎您提前預約，或是在登記入住之時告知櫃檯人員即可！
+                  </p>
+                  <p>除了主餐及排餐餐點外，全時段我們皆有提供點心類、飲品類及調酒類項目，歡迎您致電詢問櫃台做點選。</p>
+                  <p>*未滿十八歲禁止飲酒・飲酒過量，有害健康*</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="room-area d-flex h-100 w-100 justify-content-between">
+                <div class="carousel-title-mobile">
+                  <h3>每日定時清潔服務</h3>
+                </div>
+                <div class="room-carousel d-flex">
+                  <img src="./images/space/space05.jpg" alt="" />
+                </div>
+                <div class="room-text-area d-flex flex-column">
+                  <h3 class="carousel-title-pc">每日定時清潔服務</h3>
+                  <p>我們提供的清潔服務是確保客房維持整潔舒適的重要環節。我們專業的清潔團隊將以細緻入微的態度，致力於提供卓越的服務品質。</p>
+                  <p>
+                    每日清潔包括更換床單、毛巾及盥洗用品，並徹底清掃地板、窗戶及家具，確保房間的每個細節都得到妥善打理。此外，也會定期進行深度清潔，例如地毯清潔、窗戶擦拭等工作，以確保客房內部的整潔與衛生。
+                  </p>
+                  <p>請注意，清潔範圍可能會因不同飯店的規模和設施而有所不同，但房間內部的整潔通常是清潔服務的核心範圍之一。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 特色區塊 -->
+      <div class="index-section3">
+        <div class="w-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="star-area2 d-flex">
+              <img src="./SVG/blackstar.svg" alt="" />
+              <img src="./SVG/blackstar.svg" alt="" />
+              <img src="./SVG/blackstar.svg" alt="" />
+            </div>
+            <div><h2 class="">特色</h2></div>
+            <div class="star-area2 d-flex">
+              <img src="./SVG/blackstar.svg" alt="" />
+              <img src="./SVG/blackstar.svg" alt="" />
+              <img src="./SVG/blackstar.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="feature-area d-flex flex-column-reverse flex-lg-row">
+          <div class="text-area">
+            <div class="d-flex flex-column justify-content-between">
+              <div class="ul-area">
+                <ul>
+                  <div class="d-flex">
+                    <div>
+                      <img src="./SVG/blackstar.svg" alt="" />
+                    </div>
+                    <li>擁有寬闊台北市景視野。</li>
+                  </div>
+                  <div class="d-flex">
+                    <div>
+                      <img src="./SVG/blackstar.svg" alt="" />
+                    </div>
+                    <li>寬敞的休憩空間，窗邊並設有舒適沙發與咖啡桌。</li>
+                  </div>
+                  <div class="d-flex">
+                    <div>
+                      <img src="./SVG/blackstar.svg" alt="" />
+                    </div>
+                    <li>客房挑高3公尺，且擁有全視界大型觀景窗戶。</li>
+                  </div>
+                  <div class="d-flex">
+                    <div>
+                      <img src="./SVG/blackstar.svg" alt="" />
+                    </div>
+                    <li>貴賓可到豪華閣貴賓廊享受尊榮禮遇。</li>
+                  </div>
+                  <div class="d-flex">
+                    <div>
+                      <img src="./SVG/blackstar.svg" alt="" />
+                    </div>
+                    <li>Shower大理石打造的浴室配備12吋平板電視機和獨立淋浴間及浴缸。</li>
+                  </div>
+                  <div class="d-flex">
+                    <div>
+                      <img src="./SVG/blackstar.svg" alt="" />
+                    </div>
+                    <li>Space房間面積為58 平方米 / 663 平方英尺。</li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="pic-101 d-flex">
+            <img src="./images/feature/fe01.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 客房設備區塊 -->
+      <div class="index-section4">
+        <div class="w-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="d-flex justify-content-between align-items-center mb-5 mt-3">
+            <div class="star-area3 d-flex">
+              <img src="./SVG/gold-star.svg" alt="" />
+              <img src="./SVG/gold-star.svg" alt="" />
+              <img src="./SVG/gold-star.svg" alt="" />
+            </div>
+            <h2 class="text-center">客房設備與服務</h2>
+            <div class="star-area3 d-flex">
+              <img src="./SVG/gold-star.svg" alt="" />
+              <img src="./SVG/gold-star.svg" alt="" />
+              <img src="./SVG/gold-star.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="section4-area w-100 d-flex flex-column flex-lg-row align-items-center justify-content-center">
+          <div class="section4-img-area px-5">
+            <div class="section4-background">
+              <img src="./images/bathroom/bath01.jpg" alt="" />
+            </div>
+          </div>
+          <div class="section4-txt">
+            <ul>
+              <div class="d-flex mb-2">
+                <img src="./SVG/blackstar.svg" alt="" />
+                <h5>基本設施與服務</h5>
+              </div>
+              <li>乾溼分離衛浴、浴缸、免治馬桶</li>
+              <li>無線免費上網</li>
+              <br />
+              <div class="d-flex mb-2">
+                <img src="./SVG/blackstar.svg" alt="" />
+                <h5>更多服務及特殊預約需求</h5>
+              </div>
+              <li>免費停車場</li>
+              <li>洗衣及乾洗服務</li>
+              <li>兒童備品、消毒鍋、嬰兒床、嬰兒澡盆</li>
+              <li>(需預約)郵電服務</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notice區塊 -->
+      <div class="index-section5 d-flex align-items-center">
+        <div class="color-box">
+          <div class="px-5 py-3">
+            <div class="content">
+              <h2 class="text-center style=color:#9c8135">Notice</h2>
+            </div>
+            <ul>
+              <li>房價包含精緻早、晚餐，以及休閒設施使用(退房後可免費使用飯店設施至當天18:00)。</li>
+              <li>6歲以上(或115公分以上)至未滿12歲之不佔床孩童，每位加收NT$2,000元+10%，含早餐、晚餐、兒童盥洗備品包，但『不含』舖床服務；每房最多可增加未滿12歲孩童2名。</li>
+              <li>入住時間為下午3:00以後，退房時間為上午11:00以前。</li>
+              <li>飯店備有定時往返於礁溪火車站與飯店之間的免費接送服務，請最晚於入住前一天事先預約。</li>
+              <li>為確保房客的住宿品質，訪客請於晚間11點以前離開飯店，若逾時則視同住宿收費。</li>
+              <li>以上內容若有變動，恕不另行通知，並以飯店公告為主。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer區塊 -->
+    <div class="footer">
+      <div class="text-center d-flex footer-widget align-items-center">
+        <div class="d-flex align-items-between ms-3 py-3">
+          <div class="d-flex align-items-center d-flex align-items-center mx-2"><img src="./Footer/logo2.svg" alt="" /></div>
+          <!-- facebook -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512" class="mx-2">
+            <path
+              d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+            />
+          </svg>
+          <!-- Twitter -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 448 512" class="mx-2">
+            <path
+              d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"
+            />
+          </svg>
+          <!-- Instagram -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 448 512" class="mx-2">
+            <path
+              d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
+            />
+          </svg>
+        </div>
+        <div class="copywrite flex-column h-100 w-100 text-end px-4 d-flex justify-content-center">
+          <p class="">隱私權政策</p>
+          <p>Copyright &copy;A-Star 版權所有. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- js套件 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 回到Top紐 -->
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script>
+      $(function () {
+        $("body").append('<a href="javascript:void(0);"id="fixedTop">TOP</a>');
+
+        // 變數化
+        let fixedTop = $("#fixedTop");
+
+        // 載入(load)、捲動(scroll)、調整視窗大小(resize)時
+        $(window).on("load scroll resize", function () {
+          // 取得(偵測)卷軸的位置
+          //     console.log($(window).scrollTop());
+
+          //檢查捲軸的位置是否超過100
+          if ($(window).scrollTop() > 100) {
+            // 是＝>顯示TOP紐
+            $("#fixedTop").fadeIn("normal");
+          } else {
+            // 否=>隱藏TOP紐
+            $("#fixedTop").fadeOut("normal");
+          }
+        });
+
+        // 左鍵按一下(click)TOP紐時，回到最上面
+        $("#fixedTop").on("click", function () {
+          // 捲動畫面到最上面=>scrollTop:'0'
+          $("html,body").animate({ scrollTop: "0" }, 500);
+        });
+      });
+    </script>
+  </body>
+</html>

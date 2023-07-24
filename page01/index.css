@@ -1,0 +1,364 @@
+.page01 {
+  /* 首頁Banner */
+  .section1-content {
+    background-image: url(./images/main-block/page01-main-background.jpg);
+    padding: 80px 0px;
+    /* 圖片滿版 */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .section1-content::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.632);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    width: 100%;
+  }
+
+  .container img {
+    width: 800px;
+    padding-top: 50px;
+    z-index: 1;
+    padding-bottom: 50px;
+    /* border: red 2px solid; */
+  }
+
+  .slogan-area {
+    color: white;
+  }
+
+  .star-area img {
+    height: 30px;
+    width: 30px;
+    padding-left: 0px;
+    margin-right: 20px;
+  }
+
+  .title-area h1 {
+    font-size: 36px;
+  }
+
+  .space-carousel-item1 {
+    background-image: url(./images/space/space01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    width: 100%;
+  }
+
+  /* 設備照片區塊 */
+  .index-section2 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  /* button請複製 */
+  #button01 {
+    background-image: url(./images/space/space01.jpg);
+    width: 80px !important;
+    height: 80px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #button02 {
+    background-image: url(./images/space/space02.jpg);
+    width: 80px !important;
+    height: 80px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #button03 {
+    background-image: url(./images/space/space03.jpg);
+    width: 80px !important;
+    height: 80px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #button04 {
+    background-image: url(./images/space/space04.jpg);
+    width: 80px !important;
+    height: 80px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #button05 {
+    background-image: url(./images/space/space05.jpg);
+    width: 80px !important;
+    height: 80px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #carouselExampleCaptions {
+    height: 600px;
+    padding-bottom: 100px;
+    @media screen and (max-width: 768px) {
+      height: 850px;
+    }
+  }
+
+  .carousel-inner2 {
+    background-image: url(./images/room-photo/room-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    height: 100%;
+  }
+
+  .room-area {
+    padding: 5% 10%;
+    flex-direction: row;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    .carousel-title-mobile {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+        text-align: center;
+        margin: 10px 0px;
+      }
+    }
+  }
+
+  .room-area h3 {
+    color: #9c8135;
+  }
+
+  .room-area p {
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .room-carousel {
+    margin-right: 30px;
+    width: 60%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .room-text-area {
+    width: 40%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .carousel-title-pc {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .room-text-area h3 {
+    margin-bottom: 20px;
+    color: #9c8135;
+  }
+
+  .room-carousel img {
+    height: 100%;
+  }
+
+  /* 特色區塊 */
+  .index-section3 {
+    padding: 40px 80px;
+    background-color: #9c8135;
+    justify-content: center;
+    height: auto;
+  }
+
+  .text-area {
+    /* width: 50%; */
+    flex: 0.5;
+    padding: 30px 0;
+  }
+
+  .feature-area {
+    position: relative;
+  }
+
+  .star-area2 img {
+    height: 25px;
+    width: 36px;
+    padding-left: 0px;
+    margin-right: 5px;
+  }
+
+  .index-section3 h2 {
+    font-size: 36px;
+  }
+
+  .pic-101 {
+    flex: 0.5;
+  }
+
+  .ul-area li {
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .ul-area ul {
+    list-style-type: none;
+  }
+
+  .ul-area img {
+    height: 25px;
+    width: 36px;
+  }
+
+  /* 基本設施與設備區塊 */
+  .index-section4 {
+    background-image: url(./images/bathroom/bathroom-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: rgb(5, 5, 5);
+    padding: 40px 0px;
+  }
+
+  .star-area3 img {
+    height: 25px;
+    width: 36px;
+    padding-left: 0px;
+    margin-right: 5px;
+  }
+
+  .section4-background img {
+    border-radius: 0px 50px 0px 50px;
+    width: 100%;
+  }
+
+  .section4-txt img {
+    height: 25px;
+    width: 36px;
+  }
+
+  .section4-background {
+    padding: 20px 0px 0px 20px;
+    background-color: #9c8135d8;
+    color: #fff;
+    border-radius: 0 80px 0 80px;
+    width: 100%;
+  }
+
+  .index-section4 h2 {
+    color: #9c8135;
+  }
+
+  .index-section4::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.377);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+  }
+
+  /* Notice區塊 */
+  .index-section5 {
+    background-image: url(./images/notice/no01.jpg);
+    position: relative;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0px;
+  }
+
+  .index-section5::before {
+    content: "";
+    position: absolute;
+    background-color: #03030376;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+  }
+
+  .index-section5 ul {
+    color: black;
+    padding-bottom: 20px;
+    padding: 20px 50px;
+  }
+
+  .content h2 {
+    padding: 12px 50px;
+    border-radius: 100px;
+    background-color: #9c8135;
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    color: black;
+    top: -30px;
+    /* 置中 */
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .color-box {
+    background-color: #fbfbf9af;
+    color: white;
+    border-radius: 0px 80px 0px 80px;
+    margin-top: 50px;
+    position: relative;
+    margin: 0px 10%;
+  }
+
+  ul {
+    margin-top: 30px;
+  }
+
+  /* footer */
+  .footer img {
+    height: 50px;
+    left: 0;
+  }
+
+  .footer {
+    clear: both;
+    background-color: #9c8135;
+    text-align: center;
+  }
+
+  .footer li {
+    list-style: none;
+    margin-right: 20px;
+  }
+
+  .footer svg {
+    fill: #222221;
+  }
+
+  .footer svg:hover {
+    fill: white;
+  }
+
+  .copywrite {
+    color: black;
+  }
+}
